@@ -28,21 +28,24 @@
 // document.write("<h3>THE DICE GAME</h3> <br/> <h2>Random Dice Number is:   "+round+"</h2>")
 
 //Q5
-// var player1 =prompt("Enter first player name") 
-// var player2 =prompt("Enter second player name")
-// var  dise = prompt("player 1 Enter heads or tail")
-// var randomdise;
-// var randomNum = Math.round(Math.random())
-// console.log(randomNum)
-// if (randomNum === 1) { 
-// randomdise="heads"  }
-// else if ( randomNum === 0){
-// randomdise="tails"   }
-
-// document.write("flipcoin"+"<div> Player One "+player1+"</div>"+"<div> Player two "+player2+"</div>")
-// if(dise.toLowerCase === randomdise){
-//     document.write(player1+" Won")
-// }
-// else{
-//     document.write(player1+" Won")
-// }
+var player1 =prompt("Enter first player name") 
+var player2 =prompt("Enter second player name")
+var  coin = prompt("player 1 Enter heads or tail")
+var randomside;
+var randomNum = Math.round(Math.random())
+var flag ="tails";
+if (randomNum == 1) { 
+randomside="heads"  }
+else if ( randomNum == 0){
+randomside="tails"   }
+else if(randomside.toLowerCase ==="tails"){
+    flag="heads"
+}
+console.log(randomside)
+document.write("<div>  its " +randomside+"<h3>  "+player1+" selected "+randomside +"</h3>"+"<h3> "+player2+" selected "+flag+"</h3>  ")
+if(coin.toLowerCase === randomside){
+    document.write(player1+" Won")
+}
+else{
+    document.write(player2+" Won </div>")
+}
